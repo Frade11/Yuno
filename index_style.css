@@ -1,0 +1,349 @@
+:root{
+    --color-mainbg:hsl(0 0% 100%);
+    --color-bg:hsl(0 0% 95%);
+    --color-bglight:hsl(0 0% 90%);
+    --color-text:hsl(0 0% 5%);
+    --color-textmuted:hsl(0 0% 30%);
+}
+
+
+
+
+
+body{
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: "PT Sans",sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 250px;
+  height: 100vh;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background-color:var(--color-mainbg);
+  color: var(--color-text);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 20px;
+}
+.navigation a{
+     display: inline-flex;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+.nav-logo {
+    margin-bottom: 30px;
+}
+.nav-logo :hover{
+    cursor: pointer;
+}
+.nav-logo img {
+    width: 130px; 
+    height: auto; ;
+}
+
+.nav-section{
+    color: var(--color-text);
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.nav-section img{
+    margin-right: 30px;
+    width: 25px; 
+    height: auto;
+    object-fit: contain;
+    vertical-align:-5px;
+} 
+
+.more-settings{
+    margin-top:90%;
+    margin-left: 10px;
+}
+.more-settings :hover{
+    cursor: pointer;
+}
+.more-settings img{
+    margin-right: 30px;
+    width: 25px; 
+    height: auto; 
+     object-fit: contain;
+     vertical-align:-5px;
+}
+/*здесь заканчивается навигация*/
+
+
+.layout {
+  display: flex;
+  max-width: 1200px;
+  margin-left: 350px; 
+  padding: 2rem 1rem;
+  gap: 8rem;
+}
+
+.center-feed {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+   align-items: flex-start;
+}
+
+.sidebar-right {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+
+.reels,
+.main-section,
+.right-section {
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.reels {
+  width: 600px;   
+  height: 5rem;
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section {
+  width: 500px;   
+  height: 35rem;
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reels {
+  height: 5rem;
+}
+:root{
+    --color-mainbg:hsl(0 0% 100%);
+    --color-bg:hsl(0 0% 95%);
+    --color-bglight:hsl(0 0% 90%);
+    --color-text:hsl(0 0% 5%);
+    --color-textmuted:hsl(0 0% 30%);
+}
+
+
+
+
+
+body{
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: "PT Sans",sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 250px;
+  height: 100vh;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background-color:var(--color-mainbg);
+  color: var(--color-text);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 20px;
+}
+.navigation a{
+     display: inline-flex;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+.nav-logo {
+    margin-bottom: 30px;
+}
+.nav-logo :hover{
+    cursor: pointer;
+}
+.nav-logo img {
+    width: 130px; 
+    height: auto; ;
+}
+
+.nav-section{
+    color: var(--color-text);
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.nav-section img{
+    margin-right: 30px;
+    width: 25px; 
+    height: auto;
+    object-fit: contain;
+    vertical-align:-5px;
+    
+} 
+.profile-nav-icon {
+    border-radius: 50%;
+}
+.more-settings{
+    margin-top:90%;
+    margin-left: 10px;
+}
+.more-settings :hover{
+    cursor: pointer;
+}
+.more-settings img{
+    margin-right: 30px;
+    width: 25px; 
+    height: auto; 
+     object-fit: contain;
+     vertical-align:-5px;
+}
+/*здесь заканчивается навигация*/
+
+
+.layout {
+  display: flex;
+  max-width: 1200px;
+  margin-left: 350px; 
+  padding: 2rem 1rem;
+  gap: 8rem;
+}
+
+.center-feed {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+   align-items: flex-start;
+}
+
+.sidebar-right {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+
+.reels,
+.main-section,
+.right-section {
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.reels {
+  width: 600px;   
+  height: 5rem;
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section {
+  width: 500px;   
+  height: 35rem;
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reels {
+  height: 5rem;
+}
+.right-section {
+  height: 30rem;
+  padding: 1rem;
+  background-color: var(--color-mainbg);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.user-profile ,.recomended-rofile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-profile a ,.recomended-rofile a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
+}
+
+.user-profile a img ,.recomended-rofile a img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.profile-text span {
+  font-size: 12px;
+  color:var(--color-textmuted);
+  margin-top: 2px;
+}
+
+.exit-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 100px;
+}
+.recomendation{
+    color:var(--color-textmuted);
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}

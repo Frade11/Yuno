@@ -1,0 +1,134 @@
+:root {
+  --color-mainbg: hsl(0 0% 100%);
+  --color-bg: hsl(0 0% 95%);
+  --color-bglight: hsl(0 0% 90%);
+  --color-text: hsl(0 0% 5%);
+  --color-textmuted: hsl(0 0% 30%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "PT Sans", sans-serif;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.phone-img img {
+  width: 900px;
+  max-width: 100%;
+  height: auto;
+}
+
+.reg-section {
+  background-color: var(--color-mainbg);
+  border-radius: 1rem;
+  padding: 4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+.valid-dates input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-bglight);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.valid-dates button.register {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.valid-dates button.register:hover {
+  background-color: var(--color-textmuted);
+}
+
+.forget {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.forget a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .contents {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .phone-img img {
+    width: 600px;
+  }
+
+  .reg-section {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contents {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .phone-img {
+    display: none;
+  }
+
+  .reg-section {
+    width: 100%;
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .valid-dates input,
+  .valid-dates button.register {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .forget {
+    font-size: 0.85rem;
+  }
+}

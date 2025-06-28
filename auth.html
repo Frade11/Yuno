@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth_style.css">
+    <title>Auth</title>
+</head>
+<body>
+    <div class="contents">
+    <div class="phone-img">
+        <img src="./images/logpage.png">
+    </div>
+    <div class="auth-section">
+        <div class="logo">
+            <img src="./images/black-logo.png">
+        </div>
+        <div class="valid-dates">
+            <input type="text" id="username" placeholder="Username"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br><br>
+            <button class="login" id="log">Log in</button>
+        </div>
+        <div class="forget">
+            <span>Dont have an account?</span>
+            <a href="registration.html">Sign up</a>
+        </div>
+    </div></div>
+
+
+    <script>
+        document.getElementById("log").addEventListener("click",function(){
+            const Username=document.getElementById("username").value.trim();
+            const Password=document.getElementById("password").value.trim();
+
+            if(!Username || !Password){
+                alert("Enter your data!");
+                return;
+            }
+            const users = JSON.parse(localStorage.getItem("Users")) || [];
+             const foundUser = users.find(user => user.Username===Username && user.Password===Password);
+             
+
+            if(foundUser){
+                localStorage.setItem("currentUser", JSON.stringify(foundUser));
+                alert("Login succesiful!")
+                window.location.replace("index.html");
+            }else{
+                alert("Incorect username or password");
+                return;
+            }  
+        })
+    </script>
+</body>
+</html>
