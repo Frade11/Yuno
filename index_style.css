@@ -247,6 +247,57 @@ body{
   flex-shrink: 0;
 }
 
+/* ПК: показываем обычное навигационное меню, скрываем мобильное */
+
+.mobile-nav {
+  display: none;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  /* Скрываем левое меню */
+  .navigation {
+    display: none !important;
+  }
+
+  /* Показываем нижнее меню */
+  .mobile-nav {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 8px 0;
+    z-index: 999;
+  }
+
+  .mobile-nav a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .mobile-profile-icon {
+    border-radius: 50%;
+  }
+
+  /* Немного подвинем основной контент вверх, чтобы не перекрывалось */
+  main,
+  .main-content {
+    padding-bottom: 60px;
+  }
+}
+
+
+
+
+
+
+
 
 .reels,
 .main-section,
@@ -271,15 +322,16 @@ body{
 }
 
 .main-section {
-  width: 500px;   
-  height: 35rem;
-  background-color: var(--color-mainbg);
-  border-radius: 0.8rem;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  width: 500px;
+  height: auto; /* Изменяем на auto чтобы контент определял высоту */
+  background-color: transparent; /* Делаем прозрачным */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 0; /* Убираем padding */
+  gap: 2rem; /* Добавляем отступ между постами */
 }
+
 .reels {
   height: 5rem;
 }
@@ -347,3 +399,153 @@ body{
     padding: 10px;
     margin-top: 10px;
 }
+
+/*стилизация постов */
+.post-data {
+  background-color: var(--color-mainbg);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "PT Sans", sans-serif;
+  /* margin-top: 3rem; Можно убрать, так как gap в .main-section теперь отвечает за отступы */
+} 
+/* Автор */
+.author {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Изображение поста */
+.post-image img {
+  margin: auto;
+  width: 95%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Описание и лайки */
+.post-description {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.post-description .material-symbols-outlined {
+  font-size: 24px;
+  color: #e74c3c; /* Красное сердечко */
+  cursor: pointer;
+}
+
+.post-description h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-description h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-textmuted);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Скрыть правую панель */
+  .sidebar-right,
+  .right-section {
+    display: none !important;
+  }
+
+  /* Центрирование layout */
+  .layout {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .center-feed {
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .reels,
+  .main-section {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .reels {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .main-section {
+    height: auto;
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .right-section,
+  .sidebar-right {
+    display: none !important;
+  }
+
+  .layout {
+    gap: 2rem; /* уменьшаем отступы */
+    justify-content: center;
+  }
+
+  .center-feed {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .reels,
+  .main-section {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
